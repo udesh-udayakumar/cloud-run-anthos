@@ -5,8 +5,6 @@ steps:
       - 'build'
       - '-t'
       - 'gcr.io/maybank-anthos-poc/nodeapp3:$COMMIT_SHA'
-      - '-f'
-      - 'Dockerfile'
       - '.'
 
   # Push Docker image to Artifact Registry
