@@ -22,3 +22,5 @@ steps:
       - 'nodeapp3'
       - '--image'
       - 'gcr.io/maybank-anthos-poc/nodeapp3:$COMMIT_SHA'
+      - '--region'
+      - 'asia-southeast1'
