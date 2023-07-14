@@ -13,6 +13,26 @@ steps:
       - 'push'
       - 'gcr.io/maybank-anthos-poc/nodeapp3:$COMMIT_SHA'
 
+  # Set Cloud Run for Anthos
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'config'
+      - 'set'
+      - 'run/platform'
+      - 'gke'
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'config'
+      - 'set'
+      - 'run/cluster'
+      - 'cloud-run-anthos-cluster'
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'config'
+      - 'set'
+      - 'run/cluster_location'
+      - 'asia-southeast1-a'
+      
   # Update Cloud Run service
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
