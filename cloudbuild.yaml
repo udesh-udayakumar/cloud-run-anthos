@@ -18,4 +18,5 @@ steps:
     args:
       - 'run'
       - 'services'
-      - 'update-traffic'
+      - 'update'
+      - 'nodeapp3'
